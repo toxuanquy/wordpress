@@ -42,3 +42,8 @@ article.post:last-of-type {
    margin-top: 50px;
    
 }
+.post-large{
+    width: 120px;
+   height: auto;
+}
+

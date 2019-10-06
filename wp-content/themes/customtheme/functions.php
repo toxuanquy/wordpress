@@ -1,4 +1,5 @@
 <?php
+require_once get_template_directory() . '/wp-bootstrap-navlist-walker.php';
 function custom_theme_assets() {
     wp_register_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
     wp_enqueue_style('bootstrap-style');
@@ -16,8 +17,11 @@ function custom_theme_assets() {
     //pots thumbnail 
     add_theme_support( 'post-thumbnails' );
     add_image_size('blog-thumbnail',700 ,350 , true);
+    add_image_size('post-large',250 ,200 , true);
+
     function register_my_menu() {
-        register_nav_menu('header-menu',__( 'Header Menu' )); // đặt tên là Header Menu
+        register_nav_menu('header-menu',__( 'Header Menu' )); 
       }
       add_action( 'init', 'register_my_menu' );
+  
 
